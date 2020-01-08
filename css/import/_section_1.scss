@@ -1,0 +1,95 @@
+@import "_var.scss";
+
+#section_1 {
+    padding-top: 50px;
+
+    .section_1_container {
+        @include container();
+        // 輪播
+        .section_1_swiper {
+            .swiper-container {
+                width: 100%;
+                @include boxShadow();
+            }
+
+            .swiper-slide {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .Slide_bg {
+                    width: 100%;
+                    height: calc(60vh - 100px);
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+        }
+        // 最新消息
+        .section_1_news {
+            display: flex;
+            background-color: $color_1;
+            padding: 0 10%;
+            padding-top: 15px;
+
+            .news_titile {
+                margin-right: 15px;
+                p {
+                    font-size: $text_size_2;
+                    margin: 15px 0;
+                }
+            }
+            
+            .news_main {
+                padding-bottom: 30px;
+                .tab_btns {
+                    display: flex;
+
+                    .tab_btn {
+                        padding: 10px 20px;
+                        text-align: center;
+                        border-radius: 10px 10px 0 0;
+                        background-color: $color_1;
+                        color: #666;
+                        margin-right: 6px;
+                        box-shadow: 1px -1px 1px #555;
+                        cursor: pointer;
+
+                        &.active {
+                            border-bottom: none;
+                            color: #000;
+                            font-weight: bold;
+                            background-color: $color_3;
+                        }
+                    }
+                }
+
+                .tab_contents {
+                    .tab_content {
+                        display: none;
+                        padding: 10px 30px;
+                        border-radius: 0 10px 10px 10px;
+                        box-shadow: 5px 5px 4px #666;
+                        // 假高
+                        height: 250px;
+                        h2 {
+                            margin: 0;
+                        }
+
+                        P {
+                            font-size: $text_size_4;
+                            background: linear-gradient(#000, #bbb);
+                            -webkit-background-clip: text;
+                            color: transparent;
+                        }
+
+                        &.active {
+                            display: block;
+                            background: linear-gradient($color_3, $color_2, $color_1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

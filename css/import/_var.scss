@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap');
+
+@mixin container() {
+    width: 1440px;
+    margin: 0 auto;
+
+    @media (max-width: 1440px) {
+        width: 100%;
+    }
+
+    @media (max-width: 1200px) {
+        width: 100%;
+    }
+
+    @media (max-width: 992px) {
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+
+    @media (max-width: 572px) {
+        width: 100%;
+    }
+}
+
+@mixin boxShadow(){
+    box-shadow: 8px 4px 8px 2px #242424;
+}
+
+
+$boxShadow:rgba(0, 0, 0, 0.8);
+$color_0:rgb(211, 76, 175);
+$color_1:#FFBDDC;
+$color_2:#FF78BC;
+$color_3:#FF1A8D;
+$color_4:#f75b5b;
+
+$text_size_1: 48px;
+$text_size_2: 36px;
+$text_size_3: 24px;
+$text_size_4: 18px;
+$text_size_5: 16px;
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'ZCOOL KuaiLe', cursive,'Lato', sans-serif;
+    background: linear-gradient(181deg, rgba(89, 236, 182, 1)0%, rgba(200, 253, 233, 0.7)66%);
+    background: -moz-linear-gradient(181deg, rgba(89, 236, 182, 1)0%, rgba(200, 253, 233, 0.7)66%);
+    background: -webkit-linear-gradient(181deg, rgba(89, 236, 182, 1)0%, rgba(200, 253, 233, 0.7)66%);
+    background: -o-linear-gradient(181deg, rgba(89, 236, 182, 1)0%, rgba(200, 253, 233, 0.7)66%);
+}

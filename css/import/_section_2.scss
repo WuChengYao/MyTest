@@ -1,0 +1,237 @@
+@import "_var.scss";
+
+#section_2 {
+    .section_2_container {
+        @include container();
+        background-color: $color_1;
+
+        .wrapper {
+            height: 50vh;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+
+            h2 {
+                color: #000;
+                font-size: $text_size_2;
+            }
+        }
+
+        .menu-btn {
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            height: 70px;
+            width: 54px;
+            cursor: pointer;
+            background: url('../../images/section_2/menu-icon.png') no-repeat center;
+            background-size: 44px;
+
+            &:active {
+                opacity: 0.2;
+            }
+
+        }
+
+        h2 {
+            text-align: center;
+            margin: 0;
+            line-height: 70px;
+            writing-mode: vertical-lr;
+            position: absolute;
+            top: 100px;
+        }
+
+        section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px 8px 0 0;
+            transition: transform 0.3s;
+
+
+            &.one {
+                background: $color_0;
+                transition-delay: 0s;
+            }
+
+            &.two {
+                background: $color_2;
+                transition-delay: 0.05s;
+            }
+
+            &.three {
+                background: $color_3;
+                transition-delay: 0.1s;
+            }
+
+            &.four {
+                background: $color_4;
+                transition-delay: 0.15s;
+            }
+
+            &.after {
+                transform: translateX(100%);
+            }
+
+        }
+
+        .section_all{
+            box-shadow: -2px 0 3px #666;
+            h2 {
+                color: #fff;
+                font-size: $text_size_2;
+                font-family: 'Lato', sans-serif;
+                letter-spacing: 15px;
+            }
+        }
+        .section_all:nth-last-child(1) {
+            
+        }
+
+        .section_all:nth-last-child(2) {
+            
+        }
+
+        .section_all:nth-last-child(3) {
+            
+        }
+
+        .section_all:nth-last-child(4) {
+            
+        }
+
+        //新增的class
+        .page-one {
+            section {
+                &.one {
+                    transition-delay: 0s;
+                }
+
+                &.two {
+                    transition-delay: 0.15s;
+                }
+
+                &.three {
+                    transition-delay: 0.1s;
+                }
+
+                &.four {
+                    transition-delay: 0.05s;
+                }
+            }
+        }
+
+        .page-two {
+            section {
+                &.one {
+                    transition-delay: 0s;
+                }
+
+                &.two {
+                    transition-delay: 0.05s;
+                }
+
+                &.three {
+                    transition-delay: 0.1s;
+                }
+
+                &.four {
+                    transition-delay: 0.05s;
+                }
+            }
+        }
+
+        .menu-open {
+
+            section {
+                cursor: pointer;
+
+                &.one {
+                    transform: translateX(70px);
+                    transition-delay: 0.15s;
+
+                    &:active {
+                        background: lighten($color_1, 3%);
+                    }
+
+                }
+
+                &.two {
+                    transform: translateX(140px);
+                    transition-delay: 0.1s;
+
+                    &:active {
+                        background: lighten($color_2, 3%);
+                    }
+
+                }
+
+                &.three {
+                    transform: translateX(210px);
+                    transition-delay: 0.05s;
+
+                    &:active {
+                        background: lighten($color_3, 3%);
+                    }
+
+                }
+
+                &.four {
+                    transform: translateX(280px);
+                    transition-delay: 0s;
+
+                    &:active {
+                        background: lighten($color_4, 3%);
+                    }
+
+                }
+
+            }
+
+            &.page-one {
+                section {
+                    &.one {
+                        transition-delay: 0s;
+                    }
+
+                    &.two {
+                        transition-delay: 0.05s;
+                    }
+
+                    &.three {
+                        transition-delay: 0.1s;
+                    }
+
+                    &.four {
+                        transition-delay: 0.15s;
+                    }
+                }
+            }
+
+            &.page-two {
+                section {
+                    &.one {
+                        transition-delay: 0s;
+                    }
+
+                    &.two {
+                        transition-delay: 0.05s;
+                    }
+
+                    &.three {
+                        transition-delay: 0.1s;
+                    }
+
+                    &.four {
+                        transition-delay: 0.15s;
+                    }
+                }
+            }
+
+        }
+    }
+}

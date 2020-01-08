@@ -1,0 +1,266 @@
+@import "_var.scss";
+
+nav {
+    width: 100%;
+    background-color: $boxShadow;
+    @include boxShadow();
+    position: fixed;
+    z-index: 9999;
+
+    .nav_container {
+        @include container();
+        display: flex;
+
+        .log {
+            padding-left: 10px;
+            margin-right: 10px;
+            padding-top: 3px;
+
+            img {
+                height: 45px;
+            }
+        }
+
+        // 選單列
+        .menuAll {
+            flex: 8;
+            display: flex;
+            align-items: center;
+
+
+            @media screen and (max-width:768px) {
+                display: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: #fff;
+                padding: 20px 60px;
+
+                @media screen and (max-width:1260px) {
+                    padding: 20px 30px;
+                }
+
+                @media screen and (max-width:992px) {
+                    padding: 20px 10px;
+                }
+            }
+
+            .menu:nth-child(1),
+            .menu:nth-child(2) {
+                position: relative;
+
+                &:hover ul {
+                    display: block;
+                }
+            }
+
+            .menu {
+                flex: 1;
+                color: #fff;
+                font-size: $text_size_5;
+                text-align: center;
+
+                ul {
+                    width: 100%;
+                    background-color: $boxShadow;
+                    border-radius: 0 0 5px 5px;
+                    box-shadow: -2px 3px 4px #fff;
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                    position: absolute;
+                    top: 34px;
+                    display: none;
+
+                    li {
+                        display: flex;
+                        justify-content: center;
+                        width: 100%;
+
+                        a {
+                            display: inline-block;
+                            color: #fff;
+
+                            &:hover {
+                                color: #000;
+                            }
+                        }
+
+                        &:hover {
+                            background-color: #fff;
+                        }
+                    }
+
+                    li:last-child {
+                        border-radius: 0 0 5px 5px;
+                    }
+                }
+
+            }
+
+        }
+
+        // RWD選單列
+        .menu_rwd {
+            flex: 8;
+            justify-content: center;
+            align-items: center;
+            display: none;
+
+            @media screen and (max-width:768px) {
+                display: flex;
+            }
+
+            .navbar_burger {
+                width: 40px;
+                height: 40px;
+                background-color: rgba(255, 255, 255, 0.2);
+                position: relative;
+                border: 0;
+                border-radius: 4px;
+                box-shadow: -1px 2px 3px rgba(0, 0, 0, 0.8);
+                cursor: pointer;
+
+                .burger_line {
+                    width: 70%;
+                    height: 3px;
+                    border-radius: 2px;
+                    background-color: rgb(255, 255, 255);
+                    position: absolute;
+                    right: 15%;
+                    top: 30%;
+
+                    &.burger_2 {
+                        top: 50%;
+                    }
+
+                    &.burger_3 {
+                        top: 70%;
+                    }
+
+                    &.navbar_burger_1a {
+                        animation-name: navbar_burger_1a;
+                        animation-duration: 1s;
+                        animation-fill-mode: forwards;
+
+                        @keyframes navbar_burger_1a {
+                            0% {
+                                top: 30%;
+                            }
+
+                            30% {
+                                top: 50%;
+                                transform: rotate(0);
+                            }
+
+                            100% {
+                                top: 50%;
+                                transform: rotate(45deg);
+                            }
+                        }
+                    }
+
+                    &.navbar_burger_2a {
+                        animation-name: navbar_burger_2a;
+                        animation-duration: 1s;
+                        animation-fill-mode: forwards;
+
+                        @keyframes navbar_burger_2a {
+                            0% {
+                                top: 50%;
+                            }
+
+                            50% {
+                                top: 50%;
+                                opacity: 0;
+                            }
+
+                            100% {
+                                top: 50%;
+                                opacity: 0;
+                            }
+                        }
+                    }
+
+                    &.navbar_burger_3a {
+                        animation-name: navbar_burger_3a;
+                        animation-duration: 1s;
+                        animation-fill-mode: forwards;
+
+                        @keyframes navbar_burger_3a {
+                            0% {
+                                top: 65%;
+                            }
+
+                            30% {
+                                top: 50%;
+                                transform: rotate(0);
+                            }
+
+                            100% {
+                                top: 50%;
+                                transform: rotate(-45deg);
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .navbar_burger_menu {
+                width: 100%;
+                position: absolute;
+                top: 49.5px;
+                left: 0px;
+                background-color: $boxShadow;
+                z-index: 999;
+                transform: translateY(20px);
+                transition: all 500ms ease 500ms;
+                opacity: 0;
+
+                &.burger_menu_2 {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+
+                ul {
+                    list-style-type: none;
+                    width: 100%;
+                    margin: 0px;
+                    padding: 0px;
+
+                    li {
+                        width: 100%;
+                        font-size: $text_size_5;
+                        padding: 0px;
+                        margin: 0px;
+
+                        a {
+                            color: #fff;
+                            display: block;
+                            text-decoration: none;
+                            padding: 15px 0px;
+                            text-align: center;
+
+                            &:hover {
+                                background: #fff;
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .log_2 {
+            padding-right: 10px;
+            margin-left: 10px;
+            padding-top: 3px;
+
+            img {
+                height: 45px;
+            }
+        }
+    }
+}
