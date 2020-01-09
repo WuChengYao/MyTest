@@ -40,22 +40,7 @@ oBg_img.forEach(bg_img => {
            <div class="Slide_bg" style="background-image:url('${bg_img}');"></div>
        </div>`;
 });
-var swiper = new Swiper('.swiper-container', {
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-});
+
 
 //最新消息標籤顯示頁
 var btns = document.querySelectorAll(".tab_btn");
@@ -88,7 +73,7 @@ function toggleMenu() {
     wrapper.classList.toggle('menu-open');
 }
 
-var OnSection = document.querySelector('.section_all');
+var OnSection = document.querySelectorAll('.section_all');
 OnSection.onclick = function () {
     if (wrapper.classList.contains('menu-open') == true) {
         wrapper.classList.remove('menu-open');
@@ -110,3 +95,21 @@ function goToPage(page) {
     wrapper.classList.remove('menu-open', 'page-one', 'page-two');
     wrapper.classList.add('page-' + pages[page]);
 }
+
+// swiper重置
+var swiper = new Swiper('.swiper-container', {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
