@@ -357,6 +357,7 @@ nav .nav_container .menu_rwd .navbar_burger_menu {
   -webkit-transition: all 500ms ease 500ms;
   transition: all 500ms ease 500ms;
   opacity: 0;
+  pointer-events: none;
 }
 
 nav .nav_container .menu_rwd .navbar_burger_menu.burger_menu_2 {
