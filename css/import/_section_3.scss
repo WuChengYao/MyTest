@@ -1,5 +1,6 @@
 #section_3{
     .section_3_container{
         @include container();
+        height: 100vh;
     }
 }

@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="images/title_log_2.ico">
     <title>新社莊園</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css">
+    <link rel="stylesheet" href="css/lightbox/lightbox.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
@@ -109,10 +110,6 @@
                                 officiis dolores
                                 iste numquam cem qui, sit optio aperiam enim nisi impedit ex
                                 quia non pariatur aspernatur temporibus dolorum laudantium nihil laboriosam? Numquam,
-                                odit quisquam
-                                harum, illum cupiditate totam temporibus dignissimos vero cum saepe distinctio iusto
-                                rem! In
-                                reprehenderit iste voluptate tenetur accusamus unde eius tempore nesciunt.
                             </p>
                         </div>
                         <div class="tab_content">
@@ -123,8 +120,6 @@
                                 maxime
                                 error, praesentium ipsa! Nulla consectetur nemo eum earum iusto quia consequatur maiores
                                 id tempore
-                                conseqinctio ducimus, aliquid quod eum ipsam corrupti enim
-                                dolorum recusandae fugit laudantium accusantium ratione eaque quas.
                             </p>
                         </div>
                     </div>
@@ -139,9 +134,15 @@
                 <a class="menu-btn" onclick="toggleMenu()"></a>
                 <section class="one section_all" onclick="goToPage(0)">
                     <h2>建築</h2>
-                    <!-- 內容區↓ -->
-
-                    <!-- 內容區↑ -->
+                    <div class="one_img">
+                        <img class="myone_img" src="images/section_2/one_img/one_img_1.jpg">
+                        <img class="myone_img" src="images/section_2/one_img/one_img_2.jpg">
+                        <img class="myone_img" src="images/section_2/one_img/one_img_3.jpg">
+                        <img class="myone_img" src="images/section_2/one_img/one_img_4.jpg">
+                        <img class="myone_img" src="images/section_2/one_img/one_img_5.jpg">
+                        <img class="myone_img" src="images/section_2/one_img/one_img_6.jpg">
+                        <img class="myone_img" src="images/section_2/one_img/one_img_7.jpg">
+                    </div>
                 </section>
                 <section class="two section_all" onclick="goToPage(1)">
                     <h2>美景</h2>
@@ -151,15 +152,38 @@
                 </section>
                 <section class="three section_all" onclick="goToPage(2)">
                     <h2>餐廳</h2>
-                    <!-- 內容區↓ -->
-
-                    <!-- 內容區↑ -->
+                    <div class="three_img">
+                        <a href="images/section_2/three_img/three_img_1.jpg" data-lightbox="image-1"
+                            data-title="六角亭餐廳外觀">
+                            <img src="images/section_2/three_img/three_img_1.jpg" alt="六角亭餐廳外觀" title="六角亭餐廳外觀">
+                        </a>
+                        <a href="images/section_2/three_img/three_img_2.jpg" data-lightbox="image-1"
+                            data-title="六角亭餐廳布置">
+                            <img src="images/section_2/three_img/three_img_2.jpg" alt="六角亭餐廳布置" title="六角亭餐廳布置">
+                        </a>
+                        <a href="images/section_2/three_img/three_img_3.jpg" data-lightbox="image-1"
+                            data-title="六角亭餐廳吧檯">
+                            <img src="images/section_2/three_img/three_img_3.jpg" alt="六角亭餐廳吧檯" title="六角亭餐廳吧檯">
+                        </a>
+                        <a href="images/section_2/three_img/three_img_4.jpg" data-lightbox="image-1"
+                            data-title="酒莊餐廳布置">
+                            <img src="images/section_2/three_img/three_img_4.jpg" alt="酒莊餐廳布置" title="酒莊餐廳布置">
+                        </a>
+                        <a href="images/section_2/three_img/three_img_5.jpg" data-lightbox="image-1"
+                            data-title="酒莊餐廳吧檯">
+                            <img src="images/section_2/three_img/three_img_5.jpg" alt="酒莊餐廳吧檯" title="酒莊餐廳吧檯">
+                        </a>
+                        <a href="images/section_2/three_img/three_img_6.jpg" data-lightbox="image-1"
+                            data-title="酒莊餐廳包廂">
+                            <img src="images/section_2/three_img/three_img_6.jpg" alt="酒莊餐廳包廂" title="酒莊餐廳包廂">
+                        </a>
+                    </div>
                 </section>
                 <section class="four section_all" onclick="goToPage(3)">
                     <h2>地圖</h2>
-                    <!-- 內容區↓ -->
-
-                    <!-- 內容區↑ -->
+                    <div class="four_img">
+                        <img src="images/section_2/four_img/four_park.jpg" alt="">
+                    </div>
                 </section>
             </div>
         </div>
@@ -179,7 +203,12 @@
 
         </div>
     </footer>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="js/jquery/jquery-3.4.0.min.js"></script>
+    <script src="js/lightbox/lightbox.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.js"></script>
     <script src="js/index.js"></script>
 

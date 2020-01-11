@@ -40,7 +40,23 @@ oBg_img.forEach(bg_img => {
            <div class="Slide_bg" style="background-image:url('${bg_img}');"></div>
        </div>`;
 });
-
+// swiper重置
+var swiper = new Swiper('.swiper-container', {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
 
 //最新消息標籤顯示頁
 var btns = document.querySelectorAll(".tab_btn");
@@ -95,21 +111,29 @@ function goToPage(page) {
     wrapper.classList.remove('menu-open', 'page-one', 'page-two');
     wrapper.classList.add('page-' + pages[page]);
 }
+//莊園導覽內容區
+//one
+var myOneImg = 0;
+carousel();
 
-// swiper重置
-var swiper = new Swiper('.swiper-container', {
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-});
+function carousel() {
+    var i;
+    var x = document.querySelectorAll(".myone_img");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    myOneImg++;
+    if (myOneImg > x.length) {
+        myOneImg = 1
+    }
+    x[myOneImg - 1].style.display = "block";
+    setTimeout(carousel, 9000);
+}
+//two
+
+// three
+lightbox.option({
+    'resizeDuration': 2000,
+    'wrapAround': true,
+    'disableScrolling':true,
+  })

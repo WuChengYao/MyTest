@@ -1,12 +1,11 @@
-
-
 #section_2 {
     .section_2_container {
         @include container();
         background-color: $color_1;
+        padding-bottom: 25px;
 
         .wrapper {
-            height: 50vh;
+            height: 90vh;
             width: 100%;
             overflow: hidden;
             position: relative;
@@ -15,6 +14,74 @@
                 color: #000;
                 font-size: $text_size_2;
             }
+
+            // 內容區↓
+            .one_img,
+            .two_img,
+            .three_img,
+            .four_img {
+                width: 100%;
+                height: 100%;
+                padding: 5px 10px 10px 66px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 5px;
+                    box-shadow: -2px 2px 3px #000;
+                }
+            }
+
+            .one {
+                .one_img {
+
+                    img {
+                        margin-bottom: 16px;
+                        animation: fading 10s infinite;
+                        vertical-align: middle;
+                        border-style: none;
+
+                        @keyframes fading {
+                            0% {
+                                opacity: 0;
+                                box-shadow: 0;
+                            }
+
+                            50% {
+                                opacity: 1;
+                                box-shadow: -2px 2px 3px #000;
+                            }
+
+                            100% {
+                                opacity: 0;
+                                box-shadow: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // .two {
+
+            // }
+
+            .three {
+                .three_img {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+
+                    a {
+                        width: 30%;
+                        height: 50%;
+                        display: inline-block;
+                        padding: 5px;
+                    }
+                }
+            }
+
+            //內容區↑
         }
 
         .menu-btn {
@@ -79,30 +146,17 @@
 
         }
 
-        .section_all{
+        .section_all {
             box-shadow: -2px 0 3px #666;
+
             h2 {
                 color: #fff;
-                font-size: $text_size_2;
+                font-size: $text_size_3;
                 font-family: 'Lato', sans-serif;
                 letter-spacing: 15px;
             }
         }
-        // .section_all:nth-last-child(1) {
-            
-        // }
 
-        // .section_all:nth-last-child(2) {
-            
-        // }
-
-        // .section_all:nth-last-child(3) {
-            
-        // }
-
-        // .section_all:nth-last-child(4) {
-            
-        // }
 
         //新增的class
         .page-one {
