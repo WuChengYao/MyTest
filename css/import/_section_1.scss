@@ -1,5 +1,5 @@
 #section_1 {
-    padding-top: 50px;
+    // padding-top: 50px;
 
     .section_1_container {
         @include container();
@@ -17,7 +17,7 @@
 
                 .Slide_bg {
                     width: 100%;
-                    height: calc(60vh - 100px);
+                    height: calc(70vh - 100px);
                     background-size: cover;
                     background-position: center;
                 }

@@ -36,11 +36,12 @@
             .one {
                 .one_img {
 
-                    img {
+                    .myone_main {
+                        height: 100%;
                         margin-bottom: 16px;
+                        border-radius: 5px;
+                        display: flex;
                         animation: fading 10s infinite;
-                        vertical-align: middle;
-                        border-style: none;
 
                         @keyframes fading {
                             0% {
@@ -57,6 +58,27 @@
                                 opacity: 0;
                                 box-shadow: 0;
                             }
+                        }
+
+                        .main_img {
+                            padding-left: 5px;
+                            flex: 1;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            img {
+                                box-shadow: none;
+                                height: 60%;
+                            }
+                        }
+
+                        .img_main {
+                            flex: 1;
+                            padding: 10px;
+                            // .title {}
+
+                            // .present {}
                         }
                     }
                 }

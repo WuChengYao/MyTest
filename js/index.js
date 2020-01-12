@@ -24,11 +24,23 @@ function navBtnHandler() {
         var aWidth = window.outerWidth;
         if (aWidth > 770 & oAddClass_BurgerMenu.classList.contains('burger_menu_2') == true) {
             oAddClass_BurgerMenu.classList.remove('burger_menu_2');
-            oAddClass_1.classList.remove('navbar_burger_1a')
-            oAddClass_2.classList.remove('navbar_burger_2a')
-            oAddClass_3.classList.remove('navbar_burger_3a')
+            oAddClass_1.classList.remove('navbar_burger_1a');
+            oAddClass_2.classList.remove('navbar_burger_2a');
+            oAddClass_3.classList.remove('navbar_burger_3a');
         }
     }
+}
+// navbar下滾隱藏上滾顯示
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    var Onavbar = document.querySelector("#navbar");
+    if (prevScrollpos > currentScrollPos) {
+        Onavbar.classList.add('nav_block');
+    } else {
+        Onavbar.classList.remove('nav_block');
+    }
+    prevScrollpos = currentScrollPos;
 }
 //輪播圖
 var oIn = document.querySelector('.section_1_swiper');
@@ -118,7 +130,7 @@ carousel();
 
 function carousel() {
     var i;
-    var x = document.querySelectorAll(".myone_img");
+    var x = document.querySelectorAll(".myone_main");
     for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
     }
@@ -126,7 +138,7 @@ function carousel() {
     if (myOneImg > x.length) {
         myOneImg = 1
     }
-    x[myOneImg - 1].style.display = "block";
+    x[myOneImg - 1].style.display = "flex";
     setTimeout(carousel, 9000);
 }
 //two
@@ -135,5 +147,5 @@ function carousel() {
 lightbox.option({
     'resizeDuration': 2000,
     'wrapAround': true,
-    'disableScrolling':true,
-  })
+    'disableScrolling': true,
+})
