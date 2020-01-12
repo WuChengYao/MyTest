@@ -367,6 +367,7 @@ nav .nav_container .menu_rwd .navbar_burger_menu.burger_menu_2 {
   opacity: 1;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
+  pointer-events: visible;
 }
 
 nav .nav_container .menu_rwd .navbar_burger_menu ul {

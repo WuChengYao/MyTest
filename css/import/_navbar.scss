@@ -231,6 +231,7 @@ nav {
                 &.burger_menu_2 {
                     opacity: 1;
                     transform: translateY(0px);
+                    pointer-events: visible;
                 }
 
                 ul {
