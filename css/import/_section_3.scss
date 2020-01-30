@@ -1,6 +1,21 @@
-#section_3{
-    .section_3_container{
+#section_3 {
+    .section_3_container {
         @include container();
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background: url('../images/section_3/section_3.jpg') 50% center / cover no-repeat fixed;
+        position: relative;
+        display: flex;
         height: 100vh;
+
+        @media (max-width: 960px) {
+            background-attachment: scroll;
+        }
+        .section_3_l{
+            img{
+                height: 300px;
+            }
+        }
+        .section_3_r{}
     }
 }

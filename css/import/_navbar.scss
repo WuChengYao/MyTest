@@ -3,7 +3,7 @@ nav {
     background-color: $boxShadow;
     @include boxShadow();
     position: fixed;
-    z-index: 9999;
+    z-index: 99;
     transform: translateY(-20px);
     transition: all 500ms ease 500ms;
     opacity: 0;
@@ -222,7 +222,7 @@ nav {
                 top: 49.5px;
                 left: 0px;
                 background-color: $boxShadow;
-                z-index: 999;
+                z-index: 99;
                 transform: translateY(20px);
                 transition: all 500ms ease 500ms;
                 opacity: 0;

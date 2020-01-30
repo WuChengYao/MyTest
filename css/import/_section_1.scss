@@ -1,10 +1,10 @@
 #section_1 {
-    // padding-top: 50px;
-
     .section_1_container {
         @include container();
+
         // 輪播
         .section_1_swiper {
+            position: relative;
             .swiper-container {
                 width: 100%;
                 @include boxShadow();
@@ -17,29 +17,71 @@
 
                 .Slide_bg {
                     width: 100%;
-                    height: calc(70vh - 100px);
+                    height: 80vh;
                     background-size: cover;
                     background-position: center;
+
+                    @media (max-width:576px) {
+                        height: 100vh;
+                    }
+                }
+                
+            }
+            img{
+                height: 250px;
+                position: absolute;
+                z-index: 1;
+                top: 25%;
+                left: calc(50% - 96.5px);
+                animation: swiper_in_logo 11s ease-in-out alternate-reverse infinite;
+
+                @keyframes swiper_in_logo {
+                    from{
+                        transform: rotate3d(0, 1, 0, 0deg);
+                    }
+                    to{
+                        transform: rotate3d(0, 1, 0, 360deg);
+                    }
+                }
+
+                @media (max-width:768px) {
+                    top: 30%;
+                    left: calc(50% - 77.5px);
+                    height: 200px;
+                }
+                @media (max-width:576px) {
+                    top: 35%;
+                    left: calc(50% - 58px);
+                    height: 150px;
                 }
             }
         }
+
         // 最新消息
         .section_1_news {
             display: flex;
             background-color: $color_1;
-            padding: 0 10%;
-            padding-top: 15px;
+            width: 100%;
+            padding: 15px 10%;
+            background: url('../images/section_1/section_1.jpg') 50% center / cover no-repeat fixed;
+
+            @media (max-width: 960px) {
+                background-attachment: scroll;
+            }
 
             .news_titile {
                 margin-right: 15px;
+
                 p {
                     font-size: $text_size_2;
                     margin: 15px 0;
+                    color: #fff;
                 }
             }
-            
+
             .news_main {
                 padding-bottom: 30px;
+
                 .tab_btns {
                     display: flex;
 
@@ -50,13 +92,13 @@
                         background-color: $color_1;
                         color: #666;
                         margin-right: 6px;
-                        box-shadow: 1px -1px 1px #555;
                         cursor: pointer;
 
                         &.active {
                             border-bottom: none;
                             color: #000;
                             font-weight: bold;
+                            box-shadow: 1px -1px 1px #000;
                             background-color: $color_3;
                         }
                     }
@@ -67,9 +109,10 @@
                         display: none;
                         padding: 10px 30px;
                         border-radius: 0 10px 10px 10px;
-                        box-shadow: 5px 5px 4px #666;
+                        box-shadow: 5px 5px 4px #000;
                         // 假高
-                        height: 250px;
+                        height: 50vh;
+
                         h2 {
                             margin: 0;
                         }
