@@ -1,5 +1,42 @@
-footer{
-    .footer_container{
+footer {
+    .footer_container {
         @include container();
+        background-color: $color_1;
+        box-shadow: 0px -4px 2px #333;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width:650px) {
+            flex-wrap: wrap;
+        }
+
+        .footer_logo {
+            
+            @media (max-width:650px) {
+                width: 50%;
+                text-align: center;
+            }
+            @media (max-width:460px) {
+                width: 100%;
+            }
+        }
+
+        .footer_main {
+            a{
+                p{
+
+                }
+            }
+            @media (max-width:650px) {
+                width: 50%;
+                text-align: center;
+            }
+            @media (max-width:460px) {
+                width: 100%;
+            }
+        }
     }
 }
