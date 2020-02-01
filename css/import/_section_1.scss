@@ -30,7 +30,7 @@
             img{
                 height: 250px;
                 position: absolute;
-                z-index: 3;
+                z-index: 10;
                 top: 25%;
                 left: calc(50% - 96.5px);
                 animation: swiper_in_logo 11s ease-in-out alternate-reverse infinite;
@@ -68,7 +68,12 @@
             @media (max-width: 960px) {
                 background-attachment: scroll;
             }
-
+            @media (max-width: 768px) {
+                padding: 15px;
+            }
+            @media (max-width: 576px) {
+                padding: 15px 5px;
+            }
             .news_titile {
                 margin-right: 15px;
 
@@ -116,6 +121,9 @@
                         h2 {
                             margin: 0;
                             padding: 0 10px;
+                            @media (max-width: 768px) {
+                                padding: 0;
+                            }
                         }
 
                         P {
@@ -124,6 +132,9 @@
                             padding: 0 10px;
                             -webkit-background-clip: text;
                             color: transparent;
+                            @media (max-width: 768px) {
+                                padding: 0;
+                            }
                         }
 
                         &.active {
