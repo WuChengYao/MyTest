@@ -7,33 +7,43 @@ footer {
         padding-bottom: 15px;
         position: relative;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
 
         @media (max-width:650px) {
             flex-wrap: wrap;
         }
 
         .footer_logo {
-            
+            height: 100%;
+
             @media (max-width:650px) {
                 width: 50%;
                 text-align: center;
             }
+
             @media (max-width:460px) {
                 width: 100%;
+            }
+
+            img {
+                height: 100%;
             }
         }
 
         .footer_main {
-            a{
-                p{
+            color: #000;
+            font-size: $text_size_3;
 
-                }
+            a {
+                text-decoration: none;
+                color: #000;
             }
+
             @media (max-width:650px) {
                 width: 50%;
                 text-align: center;
             }
+
             @media (max-width:460px) {
                 width: 100%;
             }

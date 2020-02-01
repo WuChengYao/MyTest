@@ -30,7 +30,7 @@
             img{
                 height: 250px;
                 position: absolute;
-                z-index: 1;
+                z-index: 3;
                 top: 25%;
                 left: calc(50% - 96.5px);
                 animation: swiper_in_logo 11s ease-in-out alternate-reverse infinite;
@@ -111,15 +111,17 @@
                         border-radius: 0 10px 10px 10px;
                         box-shadow: 5px 5px 4px #000;
                         // 假高
-                        height: 50vh;
+                        // height: 50vh;
 
                         h2 {
                             margin: 0;
+                            padding: 0 10px;
                         }
 
                         P {
                             font-size: $text_size_4;
                             background: linear-gradient(#000, #bbb);
+                            padding: 0 10px;
                             -webkit-background-clip: text;
                             color: transparent;
                         }
