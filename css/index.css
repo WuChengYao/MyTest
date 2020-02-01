@@ -414,6 +414,7 @@ nav .nav_container .log_2 img {
 #section_1 .section_1_container {
   width: 1440px;
   margin: 0 auto;
+  position: relative;
 }
 
 @media (max-width: 1440px) {
@@ -444,10 +445,6 @@ nav .nav_container .log_2 img {
   #section_1 .section_1_container {
     width: 100%;
   }
-}
-
-#section_1 .section_1_container .section_1_swiper {
-  position: relative;
 }
 
 #section_1 .section_1_container .section_1_swiper .swiper-container {
@@ -481,7 +478,7 @@ nav .nav_container .log_2 img {
   }
 }
 
-#section_1 .section_1_container .section_1_swiper img {
+#section_1 .section_1_container img {
   height: 250px;
   position: absolute;
   z-index: 10;
@@ -513,16 +510,16 @@ nav .nav_container .log_2 img {
 }
 
 @media (max-width: 768px) {
-  #section_1 .section_1_container .section_1_swiper img {
-    top: 30%;
+  #section_1 .section_1_container img {
+    top: 25%;
     left: calc(50% - 77.5px);
     height: 200px;
   }
 }
 
 @media (max-width: 576px) {
-  #section_1 .section_1_container .section_1_swiper img {
-    top: 35%;
+  #section_1 .section_1_container img {
+    top: 25%;
     left: calc(50% - 58px);
     height: 150px;
   }
