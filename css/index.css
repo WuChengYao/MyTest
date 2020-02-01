@@ -411,10 +411,60 @@ nav .nav_container .log_2 img {
   height: 45px;
 }
 
+#section_1 {
+  position: relative;
+}
+
+#section_1 img {
+  height: 250px;
+  position: absolute;
+  z-index: 10;
+  top: 25%;
+  left: calc(50% - 96.5px);
+  animation: swiper_in_logo 11s ease-in-out alternate-reverse infinite;
+}
+
+@-webkit-keyframes swiper_in_logo {
+  from {
+    -webkit-transform: rotate3d(0, 1, 0, 0deg);
+            transform: rotate3d(0, 1, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 1, 0, 360deg);
+            transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+@keyframes swiper_in_logo {
+  from {
+    -webkit-transform: rotate3d(0, 1, 0, 0deg);
+            transform: rotate3d(0, 1, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 1, 0, 360deg);
+            transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  #section_1 img {
+    top: 23%;
+    left: calc(50% - 77.5px);
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  #section_1 img {
+    top: 23%;
+    left: calc(50% - 58px);
+    height: 150px;
+  }
+}
+
 #section_1 .section_1_container {
   width: 1440px;
   margin: 0 auto;
-  position: relative;
 }
 
 @media (max-width: 1440px) {
@@ -475,53 +525,6 @@ nav .nav_container .log_2 img {
 @media (max-width: 576px) {
   #section_1 .section_1_container .section_1_swiper .swiper-slide .Slide_bg {
     height: 100vh;
-  }
-}
-
-#section_1 .section_1_container img {
-  height: 250px;
-  position: absolute;
-  z-index: 10;
-  top: 25%;
-  left: calc(50% - 96.5px);
-  animation: swiper_in_logo 11s ease-in-out alternate-reverse infinite;
-}
-
-@-webkit-keyframes swiper_in_logo {
-  from {
-    -webkit-transform: rotate3d(0, 1, 0, 0deg);
-            transform: rotate3d(0, 1, 0, 0deg);
-  }
-  to {
-    -webkit-transform: rotate3d(0, 1, 0, 360deg);
-            transform: rotate3d(0, 1, 0, 360deg);
-  }
-}
-
-@keyframes swiper_in_logo {
-  from {
-    -webkit-transform: rotate3d(0, 1, 0, 0deg);
-            transform: rotate3d(0, 1, 0, 0deg);
-  }
-  to {
-    -webkit-transform: rotate3d(0, 1, 0, 360deg);
-            transform: rotate3d(0, 1, 0, 360deg);
-  }
-}
-
-@media (max-width: 768px) {
-  #section_1 .section_1_container img {
-    top: 25%;
-    left: calc(50% - 77.5px);
-    height: 200px;
-  }
-}
-
-@media (max-width: 576px) {
-  #section_1 .section_1_container img {
-    top: 25%;
-    left: calc(50% - 58px);
-    height: 150px;
   }
 }
 
