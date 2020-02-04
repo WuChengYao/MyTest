@@ -6,27 +6,30 @@
         z-index: 10;
         top: 25%;
         left: calc(50% - 96.5px);
+        animation: swiper_in_logo 10s infinite;
+
+        @keyframes swiper_in_logo {
+            from {
+                transform: rotate3d(0, 1, 0, 0deg);
+            }
+
+            to {
+                transform: rotate3d(0, 1, 0, 360deg);
+            }
+        }
+
         @media (max-width:768px) {
             top: 23%;
             left: calc(50% - 77.5px);
         }
+
         @media (max-width:576px) {
             top: 23%;
             left: calc(50% - 58px);
         }
+
         img {
             height: 250px;
-            animation: swiper_in_logo 10s infinite;
-
-            @keyframes swiper_in_logo {
-                from {
-                    transform: rotate3d(0, 1, 0, 0deg);
-                }
-
-                to {
-                    transform: rotate3d(0, 1, 0, 360deg);
-                }
-            }
 
             @media (max-width:768px) {
                 height: 200px;
