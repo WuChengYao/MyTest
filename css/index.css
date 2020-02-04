@@ -415,12 +415,29 @@ nav .nav_container .log_2 img {
   position: relative;
 }
 
-#section_1 img {
-  height: 250px;
+#section_1 .img_log {
   position: absolute;
   z-index: 10;
   top: 25%;
   left: calc(50% - 96.5px);
+}
+
+@media (max-width: 768px) {
+  #section_1 .img_log {
+    top: 23%;
+    left: calc(50% - 77.5px);
+  }
+}
+
+@media (max-width: 576px) {
+  #section_1 .img_log {
+    top: 23%;
+    left: calc(50% - 58px);
+  }
+}
+
+#section_1 .img_log img {
+  height: 250px;
   animation: swiper_in_logo 11s ease-in-out alternate-reverse infinite;
 }
 
@@ -447,17 +464,13 @@ nav .nav_container .log_2 img {
 }
 
 @media (max-width: 768px) {
-  #section_1 img {
-    top: 23%;
-    left: calc(50% - 77.5px);
+  #section_1 .img_log img {
     height: 200px;
   }
 }
 
 @media (max-width: 576px) {
-  #section_1 img {
-    top: 23%;
-    left: calc(50% - 58px);
+  #section_1 .img_log img {
     height: 150px;
   }
 }
