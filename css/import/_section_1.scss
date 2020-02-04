@@ -16,7 +16,7 @@
         }
         img {
             height: 250px;
-            animation: swiper_in_logo 11s ease-in-out alternate-reverse infinite;
+            animation: swiper_in_logo 10s infinite;
 
             @keyframes swiper_in_logo {
                 from {
