@@ -420,6 +420,24 @@ nav .nav_container .log_2 img {
   z-index: 10;
   top: 25%;
   left: calc(50% - 96.5px);
+}
+
+@media (max-width: 768px) {
+  #section_1 .img_log {
+    top: 23%;
+    left: calc(50% - 77.5px);
+  }
+}
+
+@media (max-width: 576px) {
+  #section_1 .img_log {
+    top: 23%;
+    left: calc(50% - 58px);
+  }
+}
+
+#section_1 .img_log img {
+  height: 250px;
   -webkit-animation: swiper_in_logo 10s infinite;
           animation: swiper_in_logo 10s infinite;
 }
@@ -444,24 +462,6 @@ nav .nav_container .log_2 img {
     -webkit-transform: rotate3d(0, 1, 0, 360deg);
             transform: rotate3d(0, 1, 0, 360deg);
   }
-}
-
-@media (max-width: 768px) {
-  #section_1 .img_log {
-    top: 23%;
-    left: calc(50% - 77.5px);
-  }
-}
-
-@media (max-width: 576px) {
-  #section_1 .img_log {
-    top: 23%;
-    left: calc(50% - 58px);
-  }
-}
-
-#section_1 .img_log img {
-  height: 250px;
 }
 
 @media (max-width: 768px) {
