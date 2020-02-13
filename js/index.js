@@ -42,6 +42,18 @@ window.onscroll = function () {
     }
     prevScrollpos = currentScrollPos;
 }
+var navbar_off = document.querySelector('#navbar');
+var navbar_off_as = navbar_off.querySelectorAll('a');
+
+navbar_off_as.forEach(navbar_off_a => {
+    navbar_off_a.onclick =function () {
+        oAddClass_BurgerMenu.classList.remove('burger_menu_2');
+        oAddClass_1.classList.remove('navbar_burger_1a');
+        oAddClass_2.classList.remove('navbar_burger_2a');
+        oAddClass_3.classList.remove('navbar_burger_3a');
+    }
+});
+
 //輪播圖
 var oIn = document.querySelector('.section_1_swiper');
 var oInner = oIn.querySelector('.swiper-wrapper');
@@ -149,3 +161,22 @@ lightbox.option({
     'wrapAround': true,
     'disableScrolling': true,
 })
+
+// 交通指南
+var bodytop = document.querySelector('#body');
+var mywindow = window;
+var prevScroll = mywindow.pageYOffset;
+
+mywindow.addEventListener('scroll', scrollBlock);
+
+function scrollBlock() {
+    var oScroll_1 = document.documentElement.scrollTop;
+    var spin_a = document.querySelector('.spin');
+    var spin_img_as = document.querySelectorAll('.spin_img');
+    if (oScroll_1 > 815) {
+        spin_img_as.forEach(spin_img_a => {
+            spin_img_a.classList.add('active');
+        });
+        spin_a.classList.add('active');
+    }
+}

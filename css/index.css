@@ -1134,6 +1134,9 @@ nav .nav_container .log_2 img {
   width: 120px;
   height: 120px;
   position: relative;
+}
+
+#section_3 .section_3_container .spin.active {
   -webkit-animation: aaa 4s forwards;
           animation: aaa 4s forwards;
 }
@@ -1186,6 +1189,9 @@ nav .nav_container .log_2 img {
           clip-path: polygon(0 0, 94.5% 0, 53.5% 100%, 0% 100%);
   top: 0;
   left: 0;
+}
+
+#section_3 .section_3_container .spin .spin_img:nth-child(1).active {
   -webkit-animation: bbb 5s forwards;
           animation: bbb 5s forwards;
 }
@@ -1239,6 +1245,9 @@ nav .nav_container .log_2 img {
           clip-path: polygon(44.5% 0, 100% 0, 100% 100%, 3.5% 100%);
   bottom: 0;
   right: 0;
+}
+
+#section_3 .section_3_container .spin .spin_img:nth-child(2).active {
   -webkit-animation: ccc 5s forwards;
           animation: ccc 5s forwards;
 }

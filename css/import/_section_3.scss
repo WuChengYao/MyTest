@@ -20,7 +20,10 @@
             width: 120px;
             height: 120px;
             position: relative;
-            animation: aaa 4s forwards;
+
+            &.active {
+                animation: aaa 4s forwards;
+            }
 
             @keyframes aaa {
                 from {
@@ -53,7 +56,10 @@
                 clip-path: polygon(0 0, 94.5% 0, 53.5% 100%, 0% 100%);
                 top: 0;
                 left: 0;
-                animation: bbb 5s forwards;
+
+                &.active {
+                    animation: bbb 5s forwards;
+                }
 
                 @keyframes bbb {
                     0% {
@@ -82,7 +88,10 @@
                 clip-path: polygon(44.5% 0, 100% 0, 100% 100%, 3.5% 100%);
                 bottom: 0;
                 right: 0;
-                animation: ccc 5s forwards;
+
+                &.active {
+                    animation: ccc 5s forwards;
+                }
 
                 @keyframes ccc {
                     0% {
