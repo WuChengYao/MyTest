@@ -108,9 +108,11 @@
                 }
             }
 
+            // 美景
             // .two {
 
             // }
+
             // 餐廳
             .three {
                 .three_img {
@@ -123,15 +125,6 @@
                         height: 50%;
                         display: inline-block;
                         padding: 5px;
-
-                        @media (max-width:576px) {
-                            padding: 20px;
-                            padding-left: 5px;
-                        }
-                        @media (max-width:360px) {
-                            padding: 10px;
-                            padding-left: 5px;
-                        }
                     }
                 }
             }
